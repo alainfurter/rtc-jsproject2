@@ -8,78 +8,88 @@
     <title>RTC JS Webshop Project 2</title>
 </head>
 <body>
+    
+    <!-- 
     <nav>
         <div class="nav-bar-container">
-            <div class="logo-container">
-                <img src="images/fielmann-logo.png" alt="Fielmann Logo">
+            <div class="nav-bar-main-container">
+                <div class="logo-container">
+                    <img src="images/bby_logo.png" alt="Best Buy Logo">
+                </div>
+                <div class="nav-bar-menu-container">
+                    <button id="hamburger-button">☰</button>
+                    <h3 id="nav-bar-menu-title">Menu</h3>
+                </div>
+                <div class="search-container">  
+                    <input type="text" id="nav-search-input" placeholder="What can we help you find today?"> 
+                    <button id="nav-search-button"><img src="images/search.png" alt="Search Icon"></button>
+                </div>
             </div>
-            <div class="sitemap-container">   
-                <ul>
-                    <li><a href="https://www.fielmann.ch/de/brillen/" rel="noopener">Brillen</a></li>
-                    <li><a href="https://www.fielmann.ch/de/sonnenbrillen/" rel="noopener">Sonnenbrillen</a></li>
-                    <li><a href="https://www.fielmann.ch/de/kontaktlinsen/" rel="noopener">Kontaktlinsen</a></li>
-                    <li><a href="https://www.fielmann.ch/de/hoerakustik/" rel="noopener">Hörakustik</a></li>
-                    <li><a href="https://www.fielmann.ch/de/service/" rel="noopener">Service</a></li>
-                    <li><a href="https://www.fielmann-group.com/de" rel="noopener">Über Fielmann</a></li>
-                </ul>
-            </div>
-            <div class="buttons-container">
-                <a href="https://www.fielmann.ch/de/brillen/herrenbrillen/"><img src="images/icon_pin.png" alt="Pin icon"></a>
-                <a href="https://www.fielmann.ch/de/suche/keine-ergebnisse/?searchValue=heeren&cHash=89d94a0a9370b5ddc8d750a9caf6181f"><img src="images/icon_search.png" alt="Search icon"></a>
-                <button id="hamburger-button"><img src="images/hamburger.png" alt="Hamburger icon"></button>
+            <div class="nav-bar-buttons-container">
+                <div class="nav-bar-button-container">
+                    <a href="https://www.bestbuy.com/site/store-locator"><img src="images/disk.png" alt="Disk Icon"></a>
+                    <h3 class="nav-bar-button-title">Bangor</h3>
+                </div>
+                <div class="nav-bar-button-container">
+                    <a href="https://www.bestbuy.com/cart"><img src="images/cart.png" alt="Cart Icon"></a>
+                    <h3 class="nav-bar-button-title">Cart</h3>
+                </div>
             </div>
         </div>
         <div class="hamburger-menu-container hidden">
             <ul>
-                <li><a href="https://www.fielmann.ch/de/brillen/" rel="noopener">Brillen</a></li>
-                <li><a href="https://www.fielmann.ch/de/sonnenbrillen/" rel="noopener">Sonnenbrillen</a></li>
-                <li><a href="https://www.fielmann.ch/de/kontaktlinsen/" rel="noopener">Kontaktlinsen</a></li>
-                <li><a href="https://www.fielmann.ch/de/hoerakustik/" rel="noopener">Hörakustik</a></li>
-                <li><a href="https://www.fielmann.ch/de/service/" rel="noopener">Service</a></li>
-                <li><a href="https://www.fielmann-group.com/de" rel="noopener">Über Fielmann</a></li>
+                <li><a href="https://www.bestbuy.com/site/store-locator" rel="noopener">Other store locations</a></li>
+                <li><a href="https://www.bestbuy.com/cart" rel="noopener">Shopping cart</a></li>
             </ul>
         </div>
     </nav>
 
     <header>
-        <div class="hero-image-container">
-            <img src="images/hero1.webp" alt="Hero image">
-        </div>
-        <div class="info-container">
-            <div class="title-info-container">
-                <h1>Fielmann Herrenbrillen</h1>
-            </div>
-            <div class="more-info-container">
-                <h2 id="more-info-text">Mehr erfahren</h1>
-                <a href="https://www.fielmann.ch/de/atrea-kontaktlinsen/">
-                    <img src="images/icon_arrow_right.png" alt="Arrow right">
-                </a>
+        <div class="header-container">
+            <div class="hero-image-container">
+                <img src="images/hero.png" alt="Hero image">
+                <button id="shop-button">Shop now</button>
             </div>
         </div>
-        <a href="#products" class="down-button">
-            <img src="images/icon_arrow_down@2x.png" alt="Arrow down">
-        </a>
     </header>
 
     <main>
-        <section class="search-section"> 
-            <div class="search-container">
-
-
-
-            </div>
-
-        </section>
-
-        <section class="products-section">
-            <div class="products-container">
-
-
-
-            </div>
-        </section>
+        <div class="section-container">
+            <section class="filter"> 
+                <h2>Search for product</h2>
+                </br>
+                <form action="#" class="search-form">
+                    <div class="brand-filter-section">
+                        <label for="brand-filter">Select brand:</label>
+                        <select class="sellers" id="brand-filter">
+                            <option value="All">All</option>
+                            <option value="Acer">Acer</option>
+                            <option value="Asus">Asus</option>
+                            <option value="Lenovo">Lenovo</option>
+                            <option value="HP">HP</option>
+                        </select>
+                    </div>
+                    <div class="price-filter-section">
+                        <label for="price-filter">Maximum price:</label>
+                        <input type="number" id="price-filter" name="price-filter" min="0" max="5000" value="5000">
+                        <button id="price-filter-button">Search</button>
+                    </div>
+                    <div class="clear-filter-section">
+                        <button id="clear-filters-button">Clear filters</button>
+                    </div>
+                </form>
+            </section>
+            <section class="products">
+                <div class="products-container">
+                </div>
+            </section>
+        </div>
     </main>
 
+    <footer>
+        <p>In-store pricing may vary. Prices and offers are subject to change. © 2023 Best Buy. All rights reserved. BEST BUY, the BEST BUY logo, the tag design, and MY BEST BUY are trademarks of Best Buy and its affiliated companies.</p>
+    </footer>
+    -->
 
     <script src="js/main.js"></script>
 </body>
